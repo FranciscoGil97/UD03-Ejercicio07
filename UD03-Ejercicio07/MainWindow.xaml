@@ -20,13 +20,15 @@
             FontWeight="Bold" />
 
         <DockPanel
-            DockPanel.Dock="Bottom">
+            DockPanel.Dock="Bottom"
+            LastChildFill="False">
             <TextBlock
                 Text="Francisco Julian Gil"
                 DockPanel.Dock="Left"
-                VerticalAlignment="Center" Margin="8"/>
+                VerticalAlignment="Center"
+                Margin="8" />
             <Button
-                Content="Cantelar"
+                Content="Cancelar"
                 DockPanel.Dock="Right"
                 Margin="5" />
             <Button
@@ -43,6 +45,8 @@
                 Margin="10" />
         </DockPanel>
         
+        
+        <StackPanel Orientation="Vertical">
         <Border
             DockPanel.Dock="Top"
             Margin="10"
@@ -56,54 +60,73 @@
                     Direction="270"
                     ShadowDepth="3" />
             </Border.Effect>
-            <StackPanel
-                Background="LightBlue">
-                <DockPanel
-                    LastChildFill="True">
+                <Grid
+                    Background="LightBlue">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            />
+                        <RowDefinition />
+                        <RowDefinition />
+                        
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="0.3*" />
+                        <ColumnDefinition
+                            Width="*" />
+                        <ColumnDefinition
+                            Width="0.3*" />
+                    </Grid.ColumnDefinitions>
+                    
+                
                     <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="0"
                         Text="Nombre"
-                        Margin="10"
                         DockPanel.Dock="Left" />
-                    <Image
-                        Source="info.png"
-                        Height="20"
-                        Margin="0,0,10,0"
-                        ToolTip="Máximo 100 caracteres"
-                        DockPanel.Dock="Right" />
                     <TextBox
-                        Margin="15,10,10,10" />
-                </DockPanel>
-                <DockPanel
-                    LastChildFill="True">
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="5"/>
+                    <Image
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Source="info.png"
+                        Height="25"
+                        ToolTip="Máximo 100 caracteres"/>
+
+
                     <TextBlock
-                        Text="Edad"
-                        Margin="10"
-                        DockPanel.Dock="Left" />
-                    <Image
-                        Source="info.png"
-                        Height="20"
-                        ToolTip="Número entero entre 0 y 100"
-                        DockPanel.Dock="Right"
-                        Margin="0,0,10,0" />
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="Nombre"/>
                     <TextBox
-                        Margin="34,10,10,10" />
-                </DockPanel>
-                <DockPanel
-                    LastChildFill="True">
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="5"/>
+                    <Image
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Source="info.png"
+                        Height="25"
+                        ToolTip="Máximo 100 caracteres"/>
+                    
                     <TextBlock
-                        Text="Dirección"
-                        Margin="10"
-                        DockPanel.Dock="Left" />
-                    <Image
-                        Source="info.png"
-                        Height="20"
-                        ToolTip="Incluir el codigo postal"
-                        DockPanel.Dock="Right"
-                        Margin="0,0,10,0" />
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="Nombre" />
                     <TextBox
-                        Margin="10" />
-                </DockPanel>
-            </StackPanel>
+                        Grid.Row="2"
+                        Grid.Column="1" 
+                        Margin="5"/>
+                    <Image
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Source="info.png"
+                        Height="25"
+                        ToolTip="Máximo 100 caracteres" />
+                </Grid>
         </Border>
 
         <Border
@@ -146,9 +169,11 @@
                     Header="Estado civil"
                     Width="150"
                     Margin="5">
-                    <StackPanel VerticalAlignment="Center">
+                    <StackPanel
+                        VerticalAlignment="Center">
                         <RadioButton
-                            Content="Soltero" FontSize="14"/>
+                            Content="Soltero"
+                            FontSize="14" />
                         <RadioButton
                             Content="Casado"
                             FontSize="14" />
@@ -159,10 +184,11 @@
                             Content="Viudo"
                             FontSize="14" />
                     </StackPanel>
-                    
+
                 </GroupBox>
-                
+
             </StackPanel>
         </Border>
+        </StackPanel>
     </DockPanel>
 </Window>
