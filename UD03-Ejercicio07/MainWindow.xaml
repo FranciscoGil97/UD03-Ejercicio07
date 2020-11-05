@@ -64,8 +64,7 @@
                     Background="LightBlue">
 
                     <Grid.RowDefinitions>
-                        <RowDefinition
-                            />
+                        <RowDefinition/>
                         <RowDefinition />
                         <RowDefinition />
                         
@@ -84,48 +83,57 @@
                         Grid.Row="0"
                         Grid.Column="0"
                         Text="Nombre"
-                        DockPanel.Dock="Left" />
+                        DockPanel.Dock="Left"
+                        VerticalAlignment="Center"
+                        Margin="8"/>
                     <TextBox
                         Grid.Row="0"
                         Grid.Column="1"
-                        Margin="5"/>
+                        VerticalAlignment="Center"/>
                     <Image
                         Grid.Row="0"
                         Grid.Column="2"
                         Source="info.png"
                         Height="25"
-                        ToolTip="Máximo 100 caracteres"/>
+                        ToolTip="Máximo 100 caracteres"
+                        VerticalAlignment="Center"/>
 
 
                     <TextBlock
                         Grid.Row="1"
                         Grid.Column="0"
-                        Text="Nombre"/>
+                        Text="Edad"
+                        VerticalAlignment="Center"
+                        Margin="8"/>
                     <TextBox
                         Grid.Row="1"
                         Grid.Column="1"
-                        Margin="5"/>
+                        VerticalAlignment="Center"/>
                     <Image
                         Grid.Row="1"
                         Grid.Column="2"
                         Source="info.png"
                         Height="25"
-                        ToolTip="Máximo 100 caracteres"/>
+                        ToolTip="Máximo 100 caracteres"
+                        VerticalAlignment="Center"/>
                     
                     <TextBlock
                         Grid.Row="2"
                         Grid.Column="0"
-                        Text="Nombre" />
+                        Text="Dirección"
+                        VerticalAlignment="Center"
+                        Margin="8"/>
                     <TextBox
                         Grid.Row="2"
-                        Grid.Column="1" 
-                        Margin="5"/>
+                        Grid.Column="1"
+                        VerticalAlignment="Center"/>
                     <Image
                         Grid.Row="2"
                         Grid.Column="2"
                         Source="info.png"
                         Height="25"
-                        ToolTip="Máximo 100 caracteres" />
+                        ToolTip="Máximo 100 caracteres"
+                        VerticalAlignment="Center" />
                 </Grid>
         </Border>
 
@@ -142,52 +150,62 @@
                     Direction="270"
                     ShadowDepth="3" />
             </Border.Effect>
-            <StackPanel
-                Background="LightGreen"
-                Orientation="Horizontal">
-                <GroupBox
-                    Header="Aficiones"
-                    Width="150"
-                    Margin="5">
-                    <StackPanel
-                        VerticalAlignment="Center">
-                        <CheckBox
-                            Content="Hacer deporte"
-                            FontSize="14" />
-                        <CheckBox
-                            Content="Viajar"
-                            FontSize="14" />
-                        <CheckBox
-                            Content="Ver series"
-                            FontSize="14" />
-                        <CheckBox
-                            Content="Leer comics"
-                            FontSize="14" />
-                    </StackPanel>
-                </GroupBox>
-                <GroupBox
-                    Header="Estado civil"
-                    Width="150"
-                    Margin="5">
-                    <StackPanel
-                        VerticalAlignment="Center">
-                        <RadioButton
-                            Content="Soltero"
-                            FontSize="14" />
-                        <RadioButton
-                            Content="Casado"
-                            FontSize="14" />
-                        <RadioButton
-                            Content="Divorciado"
-                            FontSize="14" />
-                        <RadioButton
-                            Content="Viudo"
-                            FontSize="14" />
-                    </StackPanel>
+                <Grid
+                    Background="LightGreen">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="*" />
+                        <ColumnDefinition
+                            Width="*" />
+                        <ColumnDefinition
+                            Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <GroupBox
+                        Header="Aficiones"
+                        Width="150"
+                        Margin="5"
+                        Grid.Row="0"
+                        Grid.Column="0">
+                        <StackPanel
+                            VerticalAlignment="Center">
+                            <CheckBox
+                                Content="Hacer deporte"
+                                FontSize="14" />
+                            <CheckBox
+                                Content="Viajar"
+                                FontSize="14" />
+                            <CheckBox
+                                Content="Ver series"
+                                FontSize="14" />
+                            <CheckBox
+                                Content="Leer comics"
+                                FontSize="14" />
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox
+                        Header="Estado civil"
+                        Width="150"
+                        Margin="5"
+                        Grid.Row="0"
+                        Grid.Column="1">
+                        <StackPanel
+                            VerticalAlignment="Center">
+                            <RadioButton
+                                Content="Soltero"
+                                FontSize="14" />
+                            <RadioButton
+                                Content="Casado"
+                                FontSize="14" />
+                            <RadioButton
+                                Content="Divorciado"
+                                FontSize="14" />
+                            <RadioButton
+                                Content="Viudo"
+                                FontSize="14" />
+                        </StackPanel>
 
-                </GroupBox>
-
-            </StackPanel>
+                    </GroupBox>
+                </Grid>
         </Border>
         </StackPanel>
     </DockPanel>
