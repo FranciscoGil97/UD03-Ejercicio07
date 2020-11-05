@@ -10,6 +10,64 @@
     Height="450"
     Width="800"
     Icon="/formulario.ico">
+
+    <Window.Resources>
+        <Style
+            TargetType="TextBlock">
+            <Setter
+                Property="VerticalAlignment"
+                Value="Center" />
+            <Setter
+                Property="Margin"
+                Value="8" />
+        </Style>
+        <Style
+            TargetType="TextBox">
+            <Setter
+                Property="VerticalAlignment"
+                Value="Center" />
+        </Style>
+        <Style
+            TargetType="Border">
+            <Setter
+                Property="Margin"
+                Value="10" />
+            <Setter
+                Property="Height"
+                Value="120" />
+            <Setter
+                Property="BorderBrush"
+                Value="Black" />
+            <Setter
+                Property="BorderThickness"
+                Value="3" />
+            <Setter
+                Property="CornerRadius"
+                Value="3" />
+        </Style>
+        <Style
+            TargetType="GroupBox">
+            <Setter
+                Property="Width"
+                Value="150" />
+            <Setter
+                Property="Margin"
+                Value="5" />
+        </Style>
+        <Style
+            TargetType="CheckBox">
+            <Setter
+                Property="FontSize"
+                Value="14" />
+        </Style>
+        <Style
+            TargetType="RadioButton">
+            <Setter
+                Property="FontSize"
+                Value="14" />
+        </Style>
+    </Window.Resources>
+    
     <DockPanel
         LastChildFill="True">
         <TextBlock
@@ -24,9 +82,7 @@
             LastChildFill="False">
             <TextBlock
                 Text="Francisco Julian Gil"
-                DockPanel.Dock="Left"
-                VerticalAlignment="Center"
-                Margin="8" />
+                DockPanel.Dock="Left"/>
             <Button
                 Content="Cancelar"
                 DockPanel.Dock="Right"
@@ -48,12 +104,7 @@
         
         <StackPanel Orientation="Vertical">
         <Border
-            DockPanel.Dock="Top"
-            Margin="10"
-            Height="120"
-            BorderBrush="Black"
-            BorderThickness="3"
-            CornerRadius="3">
+            DockPanel.Dock="Top">
             <Border.Effect>
                 <DropShadowEffect
                     BlurRadius="5"
@@ -83,7 +134,6 @@
                         Grid.Row="0"
                         Grid.Column="0"
                         Text="Nombre"
-                        DockPanel.Dock="Left"
                         VerticalAlignment="Center"
                         Margin="8"/>
                     <TextBox
@@ -114,7 +164,7 @@
                         Grid.Column="2"
                         Source="info.png"
                         Height="25"
-                        ToolTip="Máximo 100 caracteres"
+                        ToolTip="Número entero entre 0 y 100"
                         VerticalAlignment="Center"/>
                     
                     <TextBlock
@@ -132,18 +182,13 @@
                         Grid.Column="2"
                         Source="info.png"
                         Height="25"
-                        ToolTip="Máximo 100 caracteres"
-                        VerticalAlignment="Center" />
+                        VerticalAlignment="Center"
+                        ToolTip="Incluir el código postal"/>
                 </Grid>
         </Border>
 
         <Border
-            DockPanel.Dock="Top"
-            Margin="10"
-            Height="120"
-            BorderBrush="Black"
-            BorderThickness="3"
-            CornerRadius="3">
+            DockPanel.Dock="Top">
             <Border.Effect>
                 <DropShadowEffect
                     BlurRadius="5"
@@ -162,46 +207,34 @@
                     </Grid.ColumnDefinitions>
                     <GroupBox
                         Header="Aficiones"
-                        Width="150"
-                        Margin="5"
                         Grid.Row="0"
                         Grid.Column="0">
                         <StackPanel
                             VerticalAlignment="Center">
                             <CheckBox
-                                Content="Hacer deporte"
-                                FontSize="14" />
+                                Content="Hacer deporte"/>
                             <CheckBox
-                                Content="Viajar"
-                                FontSize="14" />
+                                Content="Viajar"/>
                             <CheckBox
-                                Content="Ver series"
-                                FontSize="14" />
+                                Content="Ver series"/>
                             <CheckBox
-                                Content="Leer comics"
-                                FontSize="14" />
+                                Content="Leer comics"/>
                         </StackPanel>
                     </GroupBox>
                     <GroupBox
                         Header="Estado civil"
-                        Width="150"
-                        Margin="5"
                         Grid.Row="0"
                         Grid.Column="1">
                         <StackPanel
                             VerticalAlignment="Center">
                             <RadioButton
-                                Content="Soltero"
-                                FontSize="14" />
+                                Content="Soltero"/>
                             <RadioButton
-                                Content="Casado"
-                                FontSize="14" />
+                                Content="Casado"/>
                             <RadioButton
-                                Content="Divorciado"
-                                FontSize="14" />
+                                Content="Divorciado"/>
                             <RadioButton
-                                Content="Viudo"
-                                FontSize="14" />
+                                Content="Viudo"/>
                         </StackPanel>
 
                     </GroupBox>
