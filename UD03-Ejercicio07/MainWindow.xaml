@@ -28,7 +28,7 @@
                 Value="Center" />
         </Style>
         <Style
-            TargetType="Border">
+            TargetType="Border" x:Key="bordescampos">
             <Setter
                 Property="Margin"
                 Value="10" />
@@ -44,6 +44,14 @@
             <Setter
                 Property="CornerRadius"
                 Value="3" />
+
+            <Setter
+                Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect />
+                </Setter.Value>
+            </Setter>
+            
         </Style>
         <Style
             TargetType="GroupBox">
@@ -104,7 +112,8 @@
         
         <StackPanel Orientation="Vertical">
         <Border
-            DockPanel.Dock="Top">
+            DockPanel.Dock="Top"
+                Style="{StaticResource bordescampos}">
             <Border.Effect>
                 <DropShadowEffect
                     BlurRadius="5"
@@ -188,13 +197,9 @@
         </Border>
 
         <Border
-            DockPanel.Dock="Top">
-            <Border.Effect>
-                <DropShadowEffect
-                    BlurRadius="5"
-                    Direction="270"
-                    ShadowDepth="3" />
-            </Border.Effect>
+            DockPanel.Dock="Top"
+                Style="{StaticResource bordescampos}">
+            
                 <Grid
                     Background="LightGreen">
                     <Grid.ColumnDefinitions>
